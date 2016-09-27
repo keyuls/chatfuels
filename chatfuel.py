@@ -27,7 +27,7 @@ def cf_connect():
     element.append(fb)
 
     print('res' + '--->' +str(element))
-    r = make_response(element)
+    r = make_response(fb)
     return r
 
 
