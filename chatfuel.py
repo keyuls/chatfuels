@@ -18,15 +18,15 @@ def cf_connect():
 
     result = result.get('result')
     fulfil = result.get('fulfillment')
-    print("fulfil------------------>"+fulfil)
+    #print("fulfil------------------>"+fulfil)
     data= fulfil.get('data')
-    print("data------------------>" + data)
+    #print("data------------------>" + data)
     fb = data.get('facebook')
-    print("fb------------------>" + fb)
+    #print("fb------------------>" + fb)
     element=[]
     element.append(fb)
 
-    print('res' + '--->' + element)
+    print('res' + '--->' +str(element))
     r = make_response(element)
     return r
 
