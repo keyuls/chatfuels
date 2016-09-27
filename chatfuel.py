@@ -15,8 +15,15 @@ def cf_connect():
     result = result.json()
     # print(result)
     res = json.dumps(result, indent=4)
-    print('res' + '--->' + res)
-    r = make_response(res)
+
+    fulfil = result.get('fulfillment')
+    data= fulfil.get("data")
+    fb = data.get("facebook")
+    element=[]
+    element.append(fb)
+
+    print('res' + '--->' + element)
+    r = make_response(element)
     return r
 
 
