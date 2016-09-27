@@ -21,15 +21,12 @@ def cf_connect():
     fb = data.get('facebook')
     element=[]
     element.append(fb)
-
-    '''
     res = json.dumps(element, indent=4)
-    print('res' + '--->' + res)
+    #print('res' + '--->' + res)
     r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
+    #r.headers['Content-Type'] = 'application/json'
     return r
-   ''' 
-    return element
+
 
 
 if __name__ == '__main__':
