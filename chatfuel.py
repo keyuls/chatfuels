@@ -17,8 +17,11 @@ def cf_connect():
     res = json.dumps(result, indent=4)
 
     fulfil = result.get('fulfillment')
-    data= fulfil.get("data")
-    fb = data.get("facebook")
+    print("fulfil------------------>"+fulfil)
+    data= fulfil.get('data')
+    print("data------------------>" + data)
+    fb = data.get('facebook')
+    print("fb------------------>" + fb)
     element=[]
     element.append(fb)
 
