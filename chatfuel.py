@@ -13,21 +13,18 @@ def cf_connect():
     s = requests.Session()
     result = s.get(api_url + 'trending today' + '&lang=en', headers=head)
     result = result.json()
-    # print(result)
-    res = json.dumps(result, indent=4)
-
     result = result.get('result')
     fulfil = result.get('fulfillment')
-    #print("fulfil------------------>"+fulfil)
     data= fulfil.get('data')
-    #print("data------------------>" + data)
     fb = data.get('facebook')
-    #print("fb------------------>" + fb)
     element=[]
     element.append(fb)
 
     print('res' + '--->' +str(element))
-    r = make_response(fb)
+    res = json.dumps(fb, indent=4)
+    r = make_response(res)
+    r.headers['Content-Type'] = 'application/json'
+
     return r
 
 
