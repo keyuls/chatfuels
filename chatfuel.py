@@ -16,6 +16,7 @@ def cf_connect():
     # print(result)
     res = json.dumps(result, indent=4)
 
+    result = result.get('result')
     fulfil = result.get('fulfillment')
     print("fulfil------------------>"+fulfil)
     data= fulfil.get('data')
