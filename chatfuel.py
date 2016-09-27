@@ -27,9 +27,9 @@ def cf_connect():
     print('res' + '--->' + res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
-   ''' 
-    r=element
     return r
+   ''' 
+    return element
 
 
 if __name__ == '__main__':
