@@ -21,10 +21,10 @@ def cf_connect():
     element.append(fb)
 
     #print('res' + '--->' +str(element))
-    res = json.dumps(fb, indent=4)
+    res = json.dumps(element, indent=4)
     print('res' + '--->' + res)
     r = make_response(res)
-    print('r' + '--->' + r)
+    #print('r' + '--->' + r)
     r.headers['Content-Type'] = 'application/json'
 
     return r
