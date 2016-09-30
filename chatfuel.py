@@ -6,6 +6,12 @@ import json
 
 app = Flask(__name__)
 
+@app.route('/nosleep')
+def no_sleep():
+    post_url='https://phfb.herokuapp.com/nosleep'
+    result = requests.get(post_url)
+    return ('', 204)
+
 @app.route('/chat')
 def cf_connect():
     query = request.args.get('query')
