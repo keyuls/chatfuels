@@ -19,7 +19,7 @@ def cf_connect():
     fulfil = result.get('fulfillment')
     data= fulfil.get('data')
     if data is None:
-        speech= data.get('speech')
+        speech= fulfil.get('speech')
         fb={"text": speech}
     else:    
         fb = data.get('facebook')
