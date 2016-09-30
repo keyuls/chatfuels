@@ -18,7 +18,11 @@ def cf_connect():
     result = result.get('result')
     fulfil = result.get('fulfillment')
     data= fulfil.get('data')
-    fb = data.get('facebook')
+    if data is None:
+        speech= data.get('speech')
+        fb={"text": speech}
+    else:    
+        fb = data.get('facebook')
     element=[]
     element.append(fb)
     res = json.dumps(element, indent=4)
