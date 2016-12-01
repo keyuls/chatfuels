@@ -19,7 +19,7 @@ def cf_connect():
     api_url = 'https://api.api.ai/v1/query?v=20150910&query='
     head = {'Authorization': 'Bearer fa64f569fcb544a38ec30ea3d7f4ab39'}
     s = requests.Session()
-    result = s.get(api_url + query + '&lang=en', headers=head)
+    result = s.get(api_url + query + '&lang=en'+ '&sessionId=1234567890', headers=head)
     result = result.json()
     result = result.get('result')
     fulfil = result.get('fulfillment')
